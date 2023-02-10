@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.example</groupId>
+  <artifactId>GEPP</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>GEPP</name>
+  <url>http://maven.apache.org</url>
+
+  <!-- Developers of this application-->
+  <developers>
+    <developer>
+      <name>Promotora Kranon</name>
+      <email>soporte.tecnico@kranon.com</email>
+      <organization>KRANON</organization>
+      <organizationUrl>https://kranon.com/</organizationUrl>
+    </developer>
+  </developers>
+
+
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <name>platform-client-v2</name>
+    <version>168.0.0</version>
+    <description>A Java package to interface with the PureCloud Platform API</description>
+    <url>https://developer.mypurecloud.com/api/rest/client-libraries/java/latest/</url>
+  </properties>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
