@@ -135,7 +135,7 @@ public class ValidateFields {
                     }
 
                     for (String as : ListaContenidoOK){
-                        System.err.println(as);
+                        System.out.println(as);
                     }
 
 
