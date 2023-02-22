@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38c0647b-abfc-4c90-9c51-859a3c8a8280" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/MoveFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/PrepareFinalCsv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/SendEmail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ValidateFields.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
+    <list default="true" id="38c0647b-abfc-4c90-9c51-859a3c8a8280" name="Changes" comment="Se añade la funcionalidad de envio de correo electronico sin control de errores">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Utileria/ModelEmail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Utileria/Utilerias.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/MoveFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/MoveFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/PrepareFinalCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/PrepareFinalCsv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/SendEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/SendEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ValidateFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ValidateFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +29,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="1050577f-2676-41e1-8e13-0d0367f9810d" />
+        <option name="url" value="https://github.com/Edgar0996/GEPP.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
@@ -57,10 +67,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+    "ToolWindowRun.ShowToolbar": "false",
+    "last_opened_file_path": "C:/Appl/GDS/reportesgsd",
+    "settings.editor.selected.configurable": "project.scopes"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ValidateFields">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="GEPP" />
@@ -74,9 +86,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MoveFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kranon.GEPP.Local.MoveFile" />
+      <module name="GEPP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Kranon.GEPP.Local.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrepareFinalCsv" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kranon.GEPP.Local.PrepareFinalCsv" />
+      <module name="GEPP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Kranon.GEPP.Local.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SendEmail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kranon.GEPP.Local.SendEmail" />
+      <module name="GEPP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Kranon.GEPP.Local.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidateFields" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kranon.GEPP.Local.ValidateFields" />
+      <module name="GEPP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Kranon.GEPP.Local.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ValidateFields" />
+        <item itemvalue="Application.MoveFile" />
+        <item itemvalue="Application.PrepareFinalCsv" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.SendEmail" />
       </list>
     </recent_temporary>
   </component>
@@ -89,6 +157,14 @@
       <option name="presentableId" value="Default" />
       <updated>1676022667426</updated>
     </task>
+    <task id="LOCAL-00001" summary="Se agregan los archivos iniciales del proyecto-mvn">
+      <created>1676025294119</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676025294119</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,5 +177,24 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se agregan los archivos iniciales del proyecto-mvn" />
+    <MESSAGE value="Se añade la funcionalidad de envio de correo electronico sin control de errores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se añade la funcionalidad de envio de correo electronico sin control de errores" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.FileNotFoundException" package="java.io" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
