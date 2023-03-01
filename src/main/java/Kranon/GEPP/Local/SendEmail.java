@@ -191,455 +191,1405 @@ public class SendEmail {
                 "\n" +
                 "</head>\n" +
                 "\n" +
+                "<body> \n" +
                 "\n" +
+                "  <table style=\"height: 100%; width: 800px;\">\n" +
+                "  \n" +
+                "    \n" +
                 "\n" +
-                "\n" +
-                "\n" +
-                "<body style=\"box-sizing: border-box;\">\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "  <table>\n" +
-                "\n" +
-                "    <td>\n" +
-                "\n" +
-                "      <tr>\n" +
-                "\n" +
-                "\n" +
-                "\n" +
+                "    <tr style=\"align-items: center; text-align: center;\">\n" +
+                "  \n" +
+                "  \n" +
+                "      <th>\n" +
                 "        <h3 style=\"color: #2E3C40;\n" +
-                "        font-size: 3.5em;\n" +
+                "        text-align: center;\n" +
+                "        font-size: 14px;\n" +
                 "        font-weight: 600;\n" +
                 "        line-height: 1;\n" +
-                "        padding-bottom: .5em;\n" +
-                "        padding-top: .5em;\n" +
-                "        margin: 0 0 0.142857143em;\n" +
-                "        border-bottom: 5px solid dodgerblue;\n" +
-                "        transition: color .45s ease, border .45s ease;\">GEPP\n" +
+                "        padding-bottom: 0em;\n" +
+                "        padding-top: 0.9em;\n" +
+                "        font-family: Tahoma, Geneva, Verdana, sans-serif;\n" +
+                "        margin: 0 0 0.0;\n" +
+                "        transition: color .45s ease, border .45s ease;\">Reporte: 27-Enero-2023\n" +
+                "        </h3>\n" +
+                "  \n" +
+                "      </th>\n" +
+                "  \n" +
+                "    </tr> <!--Fin de encabezado fecha del reporte-->\n" +
+                "  \n" +
+                "  </table>\n" +
                 "\n" +
+                "    <table style=\"height: 80px; width: 800px;\">\n" +
+                "    <tr>\n" +
                 "\n" +
-                "\n" +
+                "      <td style=\"width: 50%; \">\n" +
+                "        <h3 style=\"color: #2E3C40;\n" +
+                "                  font-size: 3.5em;\n" +
+                "                  font-weight: 600;\n" +
+                "                  line-height: 0;\n" +
+                "                  padding-top: 0.1em;\n" +
+                "                  padding-left: 0.7em;\n" +
+                "                  margin: 0 0 0.1em;\n" +
+                "                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n" +
+                "                  transition: color .45s ease, border .45s ease;\">GEPP\n" +
                 "\n" +
                 "          <img src=\"https://logos-download.com/wp-content/uploads/2016/03/Pepsi_Logo_2014.png\"\n" +
-                "            style=\"max-width: 120px; max-height: 150px; align-content:right\">\n" +
-                "\n" +
-                "\n" +
-                "\n" +
+                "            style=\"max-width: 140px; max-height: 150px; align-content:right\">\n" +
                 "\n" +
                 "        </h3>\n" +
                 "\n" +
+                "      </td>\n" +
+                "\n" +
+                "      <td style=\"width: 25%; \">\n" +
+                "        <p style=\" \n" +
+                "              \n" +
+                "              text-align: right;\n" +
+                "              font-size: 10px;\n" +
+                "              font-weight: 600;\n" +
+                "              line-height: 2.5;\n" +
+                "              margin: 0 auto;\n" +
+                "              color: black;\n" +
+                "              text-decoration: solid;\n" +
+                "              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n" +
+                "        \">Fecha De Inicio De Ejecucion:\n" +
+                "        </p>\n" +
+                "\n" +
+                "        <p style=\" \n" +
+                "              text-align: right;\n" +
+                "              font-size: 10px;\n" +
+                "              font-weight: 600;\n" +
+                "              line-height: 0.1;\n" +
+                "              margin: 0 auto;\n" +
+                "              color: black;\n" +
+                "              text-decoration: solid;\n" +
+                "              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n" +
+                "        \">Fecha Fin Ejecucion:\n" +
+                "        </p>\n" +
+                "\n" +
+                "      </td>\n" +
+                "\n" +
+                "      <td style=\"width: 25%;\">\n" +
+                "\n" +
+                "        <p style=\" \n" +
+                "              text-align: left;\n" +
+                "              font-size: 10px;\n" +
+                "              font-weight: 600;\n" +
+                "              margin: 0 auto;\n" +
+                "              line-height: 2.5;\n" +
+                "\n" +
+                "              color: black;\n" +
+                "              text-decoration: solid;\n" +
+                "              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n" +
+                "              \">2023-02-03T12:21:12.00</p>\n" +
+                "\n" +
+                "        <p style=\"\n" +
+                "             text-align: left;\n" +
+                "              font-size: 10px;\n" +
+                "              font-weight: 600;\n" +
+                "              margin: 0 auto;\n" +
+                "              line-height: 0.1;\n" +
+                "\n" +
+                "              color: black;\n" +
+                "              text-decoration: solid;\n" +
+                "              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n" +
+                "             \">2023-09-03T12:21:12.00</p>\n" +
+                "\n" +
+                "      </td>\n" +
+                "    </tr>\n" +
+                "\n" +
+                "  </table> <!--Fin de la tabla para los encabezados-->\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "  <div> <!--Inicio de la division-->\n" +
+                "    <p style=\"\n" +
+                "        height: 0px; width: 800px;\n" +
+                "        margin-top: 0%;\n" +
+                "        border-bottom: 2px solid black;\n" +
+                "        transition: color .45s ease, border .45s ease;\"></p>\n" +
+                "  </div><!--Fin de la division de linea-->\n" +
                 "\n" +
                 "\n" +
                 "\n" +
                 "\n" +
-                "      </tr>\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "    </td>\n" +
-                "\n" +
+                "  <table style=\"height: 0px; width: 800px;\">\n" +
                 "    <tr>\n" +
-                "      <td>\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "        <h4 style=\" color: #000000;\n" +
-                "\n" +
+                "      <h4 style=\" color: #000000;\n" +
                 "        text-transform: uppercase;\n" +
-                "        font-size: 1.125em;\n" +
+                "        font-size: 14px;\n" +
+                "        height: 0px; width: 800px;\n" +
                 "        font-weight: 800;\n" +
-                "        \n" +
+                "        text-align: center;\n" +
                 "        line-height: 1;\n" +
+                "        font-family: Tahoma, Geneva, Verdana, sans-serif;\n" +
                 "        letter-spacing: 0.1em;\n" +
-                "        margin: 0 0 1.5em;\n" +
+                "        margin: 0 0.9 1.5em;\n" +
                 "        transition: color .45s ease;\n" +
-                "        \">Resumen de la ejecucion del reporte custon GEPP</h4>\n" +
-                "\n" +
-                "      </td>\n" +
+                "        \">Resumen de Descarga de Archivos Fuentes - Listas De Marcacion </h4>\n" +
                 "    </tr>\n" +
+                "  </table><!--Fin de los sub - encabezados-->\n" +
                 "\n" +
                 "\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "    <tr >\n" +
-                "      <td style=\" border-left: 5px solid whitesmoke;\">\n" +
-                "\n" +
-                "        <h3 style=\" color: #000000;\n" +
-                "        opacity: 1;\n" +
-                "        text-transform: uppercase;\n" +
-                "        font-size: 1em;\n" +
-                "        font-weight: 600;\n" +
-                "        font-size: small;\n" +
-                "        line-height: 1.1;\n" +
-                "        letter-spacing: 0.1em;\n" +
-                "        margin: 0 0 0;\n" +
-                "        transition: color .45s ease;\n" +
-                "        \"> Configuracion de ejecucion</h3>\n" +
-                "\n" +
-                "\n" +
-                "        <p style=\" opacity: 0.5;\n" +
-                "        color: #000000;\n" +
-                "        font-weight: 600;\n" +
-                "        line-height: 1.2;\n" +
-                "        margin: 0 0 0em;\n" +
-                "        transform: translateY(0.1em);\n" +
-                "        transition: opacity .45s ease, transform .5s ease;\">Tipo de Interacciones consultadas: </p>\n" +
-                "\n" +
-                "        <p style=\"  opacity: 0.5;\n" +
-                "        color: #000000;\n" +
-                "        font-weight: 600;\n" +
-                "        line-height: 1.2;\n" +
-                "        margin: 0 0 0;\n" +
-                "        transform: translateY(0.1em);\n" +
-                "        transition: opacity .45s ease, transform .5s ease;\">Fecha de ejecucion del reporte: </p>\n" +
-                "\n" +
-                "\n" +
-                "        <p style=\" opacity: 0.5;\n" +
-                "        color: #000000;\n" +
-                "        font-weight: 600;\n" +
-                "        line-height: 1.2;\n" +
-                "        margin: 0 0 0em;\n" +
-                "        transform: translateY(0.1em);\n" +
-                "        transition: opacity .45s ease, transform .5s ease;\">Intervalos de tiempo: </p>\n" +
-                "\n" +
-                "\n" +
-                "        <p style=\"  opacity: 0.5;\n" +
-                "        color: #000000;\n" +
-                "        font-weight: 600;\n" +
-                "        line-height: 1.2;\n" +
-                "        margin: 0 0 0;\n" +
-                "        transform: translateY(0.1em);\n" +
-                "        transition: opacity .45s ease, transform .5s ease; \n" +
-                "        border-bottom: 3px dotted  dodgerblue;\">Duracion de intervalo: </p>\n" +
-                "      </td>\n" +
-                "\n" +
-                "\n" +
-                "      <td style=\" border-left: 5px solid whitesmoke; width: 50%;\">\n" +
-                "\n" +
-                "        <h3 style=\" color: #000000;\n" +
-                "        opacity: 1;\n" +
-                "        text-transform: uppercase;\n" +
-                "        font-size: 1em;\n" +
-                "        font-weight: 600;\n" +
-                "        font-size: small;\n" +
-                "        line-height: 1.1;\n" +
-                "        letter-spacing: 0.1em;\n" +
-                "        margin: 0 0 0;\n" +
-                "        transition: color .45s ease;\n" +
-                "        \"> Configuracion de ejecucion</h3>\n" +
-                "\n" +
-                "\n" +
-                "        <p style=\" opacity: 0.5;\n" +
-                "        color: #000000;\n" +
-                "        font-weight: 600;\n" +
-                "        line-height: 1.2;\n" +
-                "        margin: 0 0 0em;\n" +
-                "        transform: translateY(0.1em);\n" +
-                "        transition: opacity .45s ease, transform .5s ease;\">Tipo de Interacciones consultadas: </p>\n" +
-                "\n" +
-                "        <p style=\"  opacity: 0.5;\n" +
-                "      color: #000000;\n" +
-                "      font-weight: 600;\n" +
-                "      line-height: 1.2;\n" +
-                "      margin: 0 0 0;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Fecha de ejecucion del reporte: </p>\n" +
-                "\n" +
-                "\n" +
-                "        <p style=\" opacity: 0.5;\n" +
-                "      color: #000000;\n" +
-                "      font-weight: 600;\n" +
-                "      line-height: 1.2;\n" +
-                "      margin: 0 0 0em;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Intervalos de tiempo: </p>\n" +
-                "\n" +
-                "\n" +
-                "        <p style=\"  opacity: 0.5;\n" +
-                "      color: #000000;\n" +
-                "      font-weight: 600;\n" +
-                "      line-height: 1.2;\n" +
-                "      margin: 0 0 0;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      transition: opacity .45s ease, transform .5s ease; \n" +
-                "      border-bottom: 3px dotted  dodgerblue;\">Duracion de intervalo: </p>\n" +
-                "      </td>\n" +
-                "\n" +
-                "    </tr>\n" +
-                "\n" +
-                "\n" +
+                "  <table style=\"height: auto; width: 800px;\">\n" +
                 "\n" +
                 "    <tr>\n" +
-                "      <td style=\" border-left: 5px solid whitesmoke;\"\">\n" +
                 "\n" +
-                "        <h3 style=\" color: #000000; opacity: 1; text-transform: uppercase; font-size: 1em; font-weight: 600; font-size:\n" +
-                "        small; line-height: 1.1; letter-spacing: 0.1em; margin: 0 0 0; margin-top: 0.7em; transition: color .45s ease;\"> Configuracion de ejecucion</h3>\n" +
+                "      <td style=\"width: 20%; text-align: right;\">\n" +
                 "\n" +
-                "        <p style=\" opacity: 0.5; color: #000000; font-weight: 600; line-height: 1.2; margin: 0 0 0em; transform:\n" +
-                "        translateY(0.1em); transition: opacity .45s ease, transform .5s ease;\">Tipo de Interacciones consultadas: </p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: right;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: black;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Inicio del Proceso:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: right;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: black;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Conexion al SFTP:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: right;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: black;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Archivos Encontrados:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: right;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: black;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Archivos Descargados:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: right;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: black;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Archivos No cumplen:</p>\n" +
                 "\n" +
-                "        <p style=\"  opacity: 0.5;\n" +
-                "      color: #000000;\n" +
-                "      font-weight: 600;\n" +
-                "      line-height: 1.2;\n" +
-                "      margin: 0 0 0;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Fecha de ejecucion del reporte: </p>\n" +
                 "\n" +
                 "\n" +
-                "        <p style=\" opacity: 0.5;\n" +
-                "      color: #000000;\n" +
-                "      font-weight: 600;\n" +
-                "      line-height: 1.2;\n" +
-                "      margin: 0 0 0em;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Intervalos de tiempo: </p>\n" +
+                "      </td><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "      <td style=\"width: 10%; text-align: left; \">\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: left;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      padding-left: 5em;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: black;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Fecha</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: left;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      padding-left: 0.7em;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: green;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #2</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: left;\n" +
+                "                      font-size: 10px;\n" +
+                "                      padding-left: 0.7em;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: black;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #3</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: left;\n" +
+                "                      font-size: 10px;\n" +
+                "                      padding-left: 0.7em;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: #1aa0b8;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #4</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: left;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      padding-left: 0.7em;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: red;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #5</p>\n" +
+                "      </td><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "      <!--Fin de los Textos del 50% de la tabla lado izquierdo :-->\n" +
                 "\n" +
                 "\n" +
-                "        <p style=\"  opacity: 0.5;\n" +
-                "      color: #000000;\n" +
-                "      font-weight: 600;\n" +
-                "      line-height: 1.0;\n" +
-                "      margin: 0 0 0;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      border-bottom: 3px dotted  dodgerblue;\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Duracion de intervalo: </p>\n" +
+                "      <td style=\"  width: 15%; text-align: right; vertical-align: bottom; \">\n" +
                 "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "        text-align: right;\n" +
+                "        font-size: 10px;\n" +
+                "        font-weight: 600;\n" +
+                "        line-height: 1.8;\n" +
+                "        margin: 0 auto;\n" +
+                "        color: black;\n" +
+                "        text-decoration: solid;\n" +
+                "        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
                 "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "        text-align: right;\n" +
+                "        font-size: 10px;\n" +
+                "        font-weight: 600;\n" +
+                "        line-height: 1;\n" +
+                "        margin: 0 auto;\n" +
+                "        color: black;\n" +
+                "        text-decoration: solid;\n" +
+                "        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"red\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
                 "      </td>\n" +
                 "\n" +
-                "      <td style=\" border-left: 5px solid whitesmoke;\"\">\n" +
+                "      <td style=\" width: 30%; text-align: left; vertical-align: bottom; \">\n" +
                 "\n" +
-                "        <h3 style=\" color: #000000; opacity: 1; text-transform: uppercase; font-size: 1em; font-weight: 600; font-size:\n" +
-                "        small; line-height: 1.1; letter-spacing: 0.1em; margin: 0 0 0; margin-top: 0.7em; transition: color .45s ease; \"> Configuracion de ejecucion</h3>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "        text-align: left;\n" +
+                "        font-size: 10px;\n" +
+                "        font-weight: 600;\n" +
+                "        line-height: 1.8;\n" +
+                "        margin: 0 auto;\n" +
+                "        padding-left: 0.5em;\n" +
+                "        color: black;\n" +
+                "        text-decoration: solid;\n" +
+                "        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv\n" +
+                "        </p>\n" +
                 "\n" +
-                "        <p style=\" opacity: 0.5; color: #000000; font-weight: 600; line-height: 1.2; margin: 0 0 0em; transform:\n" +
-                "        translateY(0.1em); transition: opacity .45s ease, transform .5s ease;\">Tipo de Interacciones consultadas: </p>\n" +
-                "\n" +
-                "        <p style=\"  opacity: 0.5;\n" +
-                "      color: #000000;\n" +
-                "      font-weight: 600;\n" +
-                "      line-height: 1.2;\n" +
-                "      margin: 0 0 0;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Fecha de ejecucion del reporte: </p>\n" +
-                "\n" +
-                "\n" +
-                "        <p style=\" opacity: 0.5;\n" +
-                "      color: #000000;\n" +
-                "      font-weight: 600;\n" +
-                "      line-height: 1.2;\n" +
-                "      margin: 0 0 0em;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Intervalos de tiempo: </p>\n" +
-                "\n" +
-                "\n" +
-                "        <p style=\"  opacity: 0.5;\n" +
-                "      color: #000000;\n" +
-                "      font-weight: 600;\n" +
-                "      line-height: 1.2;\n" +
-                "      margin: 0 0 0;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      border-bottom: 3px dotted  dodgerblue;\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Duracion de intervalo: </p>\n" +
-                "\n" +
-                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "        text-align: left;\n" +
+                "        font-size: 10px;\n" +
+                "        font-weight: 600;\n" +
+                "        line-height: 1;\n" +
+                "        padding-left: 0.5em;\n" +
+                "        margin: 0 auto;\n" +
+                "        color: black;\n" +
+                "        text-decoration: solid;\n" +
+                "        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "          C:\\Appl\\SiVale\\Reportes\\ERROR_API_Genesys_ALL.csv</p>\n" +
                 "      </td>\n" +
+                "    </tr><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "    <!--Fin de los Textos del 50% de la tabla lado derecho :-->\n" +
+                "\n" +
+                "  </table><!--Fin de la tabla Resumen de Descarga :-->\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "  <div> <!--Inicio de la division-->\n" +
+                "    <p style=\"\n" +
+                "    height: 0px; width: 800px;\n" +
+                "        border-bottom: 3px solid black;\n" +
+                "        transition: color .45s ease, border .45s ease;\"></p>\n" +
+                "  </div><!--Fin de la division de linea-->\n" +
+                "\n" +
+                "  <table style=\"height: auto; width: 800px;\">\n" +
+                "    <tr>\n" +
+                "      <h4 style=\" color: #000000;\n" +
+                "        text-transform: uppercase;\n" +
+                "        font-size: 14px;\n" +
+                "        font-weight: 800;\n" +
+                "        height: auto; width: 800px;\n" +
+                "        text-align: center;\n" +
+                "        line-height: 1;\n" +
+                "        font-family: Tahoma, Geneva, Verdana, sans-serif;\n" +
+                "        letter-spacing: 0.1em;\n" +
+                "        margin: 0 0.9 1.5em;\n" +
+                "        transition: color .45s ease;\n" +
+                "        \">Validacion De Integridad De Datos - Listas De Marcacion </h4>\n" +
                 "    </tr>\n" +
+                "  </table><!--Fin de los sub - encabezados-->\n" +
+                "\n" +
+                "\n" +
+                "  <!--Inicio de la tabla de validacion de integridad -->\n" +
+                "\n" +
+                "  <table style=\"height: auto; width: 800px;\">\n" +
                 "\n" +
                 "    <tr>\n" +
-                "      <td style=\" border-left: 5px solid whitesmoke;\"\">\n" +
                 "\n" +
-                "        <h3 style=\" color: #000000; opacity: 1; text-transform: uppercase; font-size: 1em; font-weight: 600; font-size:\n" +
-                "        small; line-height: 1.1; letter-spacing: 0.1em; margin: 0 0 0; margin-top: 0.7em; transition: color .45s ease;\"> Configuracion de ejecucion</h3>\n" +
+                "      <td style=\"width: 20%; text-align: right;\">\n" +
                 "\n" +
-                "        <p style=\" opacity: 0.5; color: #000000; font-weight: 600; line-height: 1.2; margin: 0 0 0em; transform:\n" +
-                "        translateY(0.1em); transition: opacity .45s ease, transform .5s ease;\">Tipo de Interacciones consultadas: </p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: right;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: black;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Inicio del Proceso:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: right;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: black;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Archivos Analizados:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: right;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: black;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Archivos Finales:</p>\n" +
                 "\n" +
-                "        <p style=\"  opacity: 0.5;\n" +
-                "      color: #000000;\n" +
-                "      font-weight: 600;\n" +
-                "      line-height: 1.2;\n" +
-                "      margin: 0 0 0;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Fecha de ejecucion del reporte: </p>\n" +
+                "      </td><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "      <td style=\"width: 10%; text-align: left; \">\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: left;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      padding-left: 5em;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: black;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Fecha</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: left;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      padding-left: 0.7em;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: green;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #2</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: left;\n" +
+                "                      font-size: 10px;\n" +
+                "                      padding-left: 0.7em;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: green;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #3</p>\n" +
+                "\n" +
+                "      </td><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "      <!--Fin de los Textos del 50% de la tabla lado izquierdo :-->\n" +
                 "\n" +
                 "\n" +
-                "        <p style=\" opacity: 0.5;\n" +
-                "      color: #000000;\n" +
-                "      font-weight: 600;\n" +
-                "      line-height: 1.2;\n" +
-                "      margin: 0 0 0em;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Intervalos de tiempo: </p>\n" +
+                "      <td style=\"  width: 15%; text-align: right; vertical-align: bottom; \">\n" +
                 "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "        text-align: right;\n" +
+                "        font-size: 10px;\n" +
+                "        font-weight: 600;\n" +
+                "        line-height: 1.8;\n" +
+                "        margin: 0 auto;\n" +
+                "        color: black;\n" +
+                "        text-decoration: solid;\n" +
+                "        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
                 "\n" +
-                "        <p style=\"  opacity: 0.5;\n" +
-                "      color: #000000;\n" +
-                "      font-weight: 600;\n" +
-                "      line-height: 1.0;\n" +
-                "      margin: 0 0 0;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      border-bottom: 3px dotted  dodgerblue;\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Duracion de intervalo: </p>\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
                 "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "        text-align: right;\n" +
+                "        font-size: 10px;\n" +
+                "        font-weight: 600;\n" +
+                "        line-height: 1;\n" +
+                "        margin: 0 auto;\n" +
+                "        color: black;\n" +
+                "        text-decoration: solid;\n" +
+                "        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
                 "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
                 "      </td>\n" +
-                "      <td style=\" border-left: 5px solid whitesmoke;\">\n" +
                 "\n" +
-                "        <h3 style=\" color: #000000;\n" +
-                "        opacity: 1;\n" +
+                "      <td style=\" width: 30%; text-align: left; vertical-align: bottom; \">\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "        text-align: left;\n" +
+                "        font-size: 10px;\n" +
+                "        font-weight: 600;\n" +
+                "        line-height: 1.8;\n" +
+                "        margin: 0 auto;\n" +
+                "        padding-left: 0.5em;\n" +
+                "        color: black;\n" +
+                "        text-decoration: solid;\n" +
+                "        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv\n" +
+                "        </p>\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "        text-align: left;\n" +
+                "        font-size: 10px;\n" +
+                "        font-weight: 600;\n" +
+                "        line-height: 1;\n" +
+                "        padding-left: 0.5em;\n" +
+                "        margin: 0 auto;\n" +
+                "        color: black;\n" +
+                "        text-decoration: solid;\n" +
+                "        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "          C:\\Appl\\SiVale\\Reportes\\ERROR_API_Genesys_ALL.csv</p>\n" +
+                "      </td>\n" +
+                "    </tr><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "    <!--Fin de los Textos del 50% de la tabla lado derecho :-->\n" +
+                "\n" +
+                "  </table><!--Fin de la tabla Validacion de integridad de datos :-->\n" +
+                "\n" +
+                "\n" +
+                "  <div> <!--Inicio de la division-->\n" +
+                "    <p style=\"\n" +
+                "        height: auto; width: 800px;\n" +
+                "        border-bottom: 3px solid black;\n" +
+                "        transition: color .45s ease, border .45s ease;\"></p>\n" +
+                "  </div><!--Fin de la division de linea-->\n" +
+                "\n" +
+                "  <table style=\"height: auto; width: 800px;\">\n" +
+                "    <tr>\n" +
+                "      <h4 style=\" color: #000000;\n" +
                 "        text-transform: uppercase;\n" +
-                "        font-size: 1em;\n" +
-                "        font-weight: 600;\n" +
-                "        font-size: small;\n" +
-                "        line-height: 1.1;\n" +
+                "        font-size: 14px;\n" +
+                "        font-weight: 800;\n" +
+                "        height: auto; width: 800px;\n" +
+                "        text-align: center;\n" +
+                "        line-height: 1;\n" +
+                "        font-family: Tahoma, Geneva, Verdana, sans-serif;\n" +
                 "        letter-spacing: 0.1em;\n" +
-                "        margin: 0 0 0;\n" +
-                "        margin-top: 0.7em;\n" +
+                "        margin: 0 0.9 1.5em;\n" +
                 "        transition: color .45s ease;\n" +
-                "       \"> Configuracion de ejecucion</h3>\n" +
+                "        \">Objetos Genesys Cloud </h4>\n" +
+                "    </tr>\n" +
+                "  </table><!--Fin de los sub - encabezados-->\n" +
                 "\n" +
                 "\n" +
-                "        <p style=\" opacity: 0.5;\n" +
-                "        color: #000000;\n" +
-                "        font-weight: 600;\n" +
-                "        line-height: 1.2;\n" +
-                "        margin: 0 0 0em;\n" +
-                "        transform: translateY(0.1em);\n" +
-                "        transition: opacity .45s ease, transform .5s ease;\">Tipo de Interacciones consultadas: </p>\n" +
+                "  <!--Iniciode la tabla de objetos genesys >-->\n" +
                 "\n" +
-                "        <p style=\"  opacity: 0.5;\n" +
-                "      color: #000000;\n" +
+                "  <table style=\"height: auto; width: 800px;\">\n" +
+                "\n" +
+                "    <tr>\n" +
+                "\n" +
+                "      <td style=\"width: 20%; text-align: right;\">\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Inicio del Proceso:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Campañas GC:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Listas Marcación GC:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Correlaciones del Proceso:</p>\n" +
+                "\n" +
+                "        <br><!--salto de linea-->\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Campañas Apagadas:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Listas Descargadas:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Listas Eliminadas:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Listas Creadas:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Archivos CSV Cargados:</p>\n" +
+                "        <br><!--salto de linea-->\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Revisión Contenido LM - OK:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Revisión Contenido LM - Error:</p>\n" +
+                "        <br><!--salto de linea-->\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Asignación LM a Campañas:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Respaldo Archivos CSVs:</p>\n" +
+                "        <br><!--salto de linea-->\n" +
+                "\n" +
+                "      </td><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "      <td style=\"width: 10%; text-align: left; \">\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: left;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    padding-left: 5em;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Fecha</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: left;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    padding-left: 0.7em;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #2</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: left;\n" +
+                "                    font-size: 10px;\n" +
+                "                    padding-left: 0.7em;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #3</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: left;\n" +
+                "                    font-size: 10px;\n" +
+                "                    padding-left: 0.7em;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #3</p>\n" +
+                "\n" +
+                "        <br><!--salto de linea-->\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                     text-align: left;\n" +
+                "                     font-size: 10px;\n" +
+                "                     font-weight: 600;\n" +
+                "                     padding-left: 0.7em;\n" +
+                "                     margin: 0 auto;\n" +
+                "                     color: black;\n" +
+                "                     text-decoration: solid;\n" +
+                "                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #1</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                     text-align: left;\n" +
+                "                     font-size: 10px;\n" +
+                "                     font-weight: 600;\n" +
+                "                     padding-left: 0.7em;\n" +
+                "                     margin: 0 auto;\n" +
+                "                     color: black;\n" +
+                "                     text-decoration: solid;\n" +
+                "                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #2</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                     text-align: left;\n" +
+                "                     font-size: 10px;\n" +
+                "                     padding-left: 0.7em;\n" +
+                "                     font-weight: 600;\n" +
+                "                     margin: 0 auto;\n" +
+                "                     color: black;\n" +
+                "                     text-decoration: solid;\n" +
+                "                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #3</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                     text-align: left;\n" +
+                "                     font-size: 10px;\n" +
+                "                     padding-left: 0.7em;\n" +
+                "                     font-weight: 600;\n" +
+                "                     margin: 0 auto;\n" +
+                "                     color: black;\n" +
+                "                     text-decoration: solid;\n" +
+                "                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #3</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: left;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      padding-left: 0.7em;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: black;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #1</p>\n" +
+                "\n" +
+                "\n" +
+                "        <br><!--salto de linea-->\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: left;\n" +
+                "                      font-size: 10px;\n" +
+                "                      font-weight: 600;\n" +
+                "                      padding-left: 0.7em;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: green;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #2</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: left;\n" +
+                "                      font-size: 10px;\n" +
+                "                      padding-left: 0.7em;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: red;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #3</p>\n" +
+                "        <br><!--salto de linea-->\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: left;\n" +
+                "                      font-size: 10px;\n" +
+                "                      padding-left: 0.7em;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: green;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #3</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                      text-align: left;\n" +
+                "                      font-size: 10px;\n" +
+                "                      padding-left: 0.7em;\n" +
+                "                      font-weight: 600;\n" +
+                "                      margin: 0 auto;\n" +
+                "                      color: green;\n" +
+                "                      text-decoration: solid;\n" +
+                "                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #3</p>\n" +
+                "        <br>\n" +
+                "\n" +
+                "\n" +
+                "      </td><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "      <!--Fin de los Textos del 50% de la tabla lado izquierdo :-->\n" +
+                "\n" +
+                "\n" +
+                "      <td style=\"  width: 15%; text-align: right; \">\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
                 "      font-weight: 600;\n" +
-                "      line-height: 1.2;\n" +
-                "      margin: 0 0 0;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Fecha de ejecucion del reporte: </p>\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
                 "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
                 "\n" +
-                "        <p style=\" opacity: 0.5;\n" +
-                "      color: #000000;\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
                 "      font-weight: 600;\n" +
-                "      line-height: 1.2;\n" +
-                "      margin: 0 0 0em;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Intervalos de tiempo: </p>\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
                 "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
                 "\n" +
-                "        <p style=\"  opacity: 0.5;\n" +
-                "      color: #000000;\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
                 "      font-weight: 600;\n" +
-                "      line-height: 1.2;\n" +
-                "      margin: 0 0 0;\n" +
-                "      transform: translateY(0.1em);\n" +
-                "      border-bottom: 3px dotted  dodgerblue;\n" +
-                "      transition: opacity .45s ease, transform .5s ease;\">Duracion de intervalo: </p>\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
+                "\n" +
+                "        <br> <!-------------------------------------------------------->\n" +
+                "\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
+                "\n" +
+                "\n" +
+                "        <br><!--Salto de linea-->\n" +
+                "\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"red\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
+                "\n" +
+                "        <br><!--Salto de linea-->\n" +
+                "\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
                 "\n" +
                 "      </td>\n" +
+                "\n" +
+                "      <td style=\" width: 30%; text-align: left;\">\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv</p>\n" +
+                "\n" +
+                "        <br>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv</p>\n" +
+                "        <br>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv</p>\n" +
+                "\n" +
+                "        <br>\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      margin: 0 auto;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv</p>\n" +
+                "      </td>\n" +
+                "    </tr><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "    <!--Fin de los Textos del 50% de la tabla lado derecho :-->\n" +
+                "\n" +
+                "  </table><!--Fin de la tabla de objetos genesys >-->\n" +
+                "\n" +
+                "\n" +
+                "  <div> <!--Inicio de la division-->\n" +
+                "    <p style=\"\n" +
+                "      border-bottom: 3px solid black;\n" +
+                "      height: auto; width: 800px;\n" +
+                "      transition: color .45s ease, border .45s ease;\"></p>\n" +
+                "  </div><!--Fin de la division de linea-->\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "  <table style=\"height: auto; width: 800px;\">\n" +
+                "    <tr>\n" +
+                "      <h4 style=\" color: #000000;\n" +
+                "      text-transform: uppercase;\n" +
+                "      font-size: 14px;\n" +
+                "      height: auto; width: 800px;\n" +
+                "      font-weight: 800;\n" +
+                "      text-align: center;\n" +
+                "      line-height: 1;\n" +
+                "      font-family: Tahoma, Geneva, Verdana, sans-serif;\n" +
+                "      letter-spacing: 0.1em;\n" +
+                "      margin: 0 0.9 1.5em;\n" +
+                "      transition: color .45s ease;\n" +
+                "      \">Encendido de Campañas GEPP </h4>\n" +
                 "    </tr>\n" +
-                "\n" +
-                "\n" +
-                "  </table>\n" +
-                "\n" +
+                "  </table><!--Fin de los sub - encabezados-->\n" +
                 "\n" +
                 "\n" +
                 "\n" +
+                "  <table style=\"height: auto; width: 800px;\">\n" +
+                "\n" +
+                "    <tr>\n" +
+                "      <td style=\"width: 20%; text-align: right;\">\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Inicio del Proceso:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Campañas Apagadas:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\"># Campañas Encendidas:</p>\n" +
+                "\n" +
+                "      </td><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "      <td style=\"width: 10%; text-align: left; \">\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: left;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    padding-left: 0.7em;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    padding-left: 5em;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Fecha</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: left;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    padding-left: 0.7em;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: green;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #2</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: left;\n" +
+                "                    font-size: 10px;\n" +
+                "                    padding-left: 0.7em;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: green;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Valor #3</p>\n" +
+                "\n" +
+                "      </td><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "      <!--Fin de los Textos del 50% de la tabla lado izquierdo :-->\n" +
                 "\n" +
                 "\n" +
+                "      <td style=\"  width: 15%; text-align: right; vertical-align: bottom; \">\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      line-height: 1.8;\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: right;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      line-height: 1;\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                "\n" +
+                "          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"#1aa0b8\" class=\"bi bi-paperclip\"\n" +
+                "            viewBox=\"0 0 16 16\">\n" +
+                "            <path\n" +
+                "              d=\"M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z\" />\n" +
+                "          </svg>Detalle Archivos:\n" +
+                "        </p>\n" +
+                "      </td>\n" +
+                "\n" +
+                "      <td style=\" width: 30%; text-align: left; vertical-align: bottom; \">\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      line-height: 1.8;\n" +
+                "      margin: 0 auto;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\OK_API_Genesys_ALL.csv</p>\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "      text-align: left;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      line-height: 1;\n" +
+                "      padding-left: 0.5em;\n" +
+                "      margin: 0 auto;\n" +
+                "      color: black;\n" +
+                "      text-decoration: solid;\n" +
+                "      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">C:\\Appl\\SiVale\\Reportes\\ERROR_API_Genesys_ALL.csv\n" +
+                "        </p>\n" +
+                "      </td>\n" +
+                "    </tr><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "    <!--Fin de los Textos del 50% de la tabla lado derecho :-->\n" +
+                "\n" +
+                "  </table><!--Fin de la tabla Validacion de integridad de datos :-->\n" +
                 "\n" +
                 "\n" +
+                "  <div> <!--Inicio de la division-->\n" +
+                "    <p style=\"\n" +
+                "    height: auto; width: 800px;\n" +
+                "      border-bottom: 3px solid black;\n" +
+                "      transition: color .45s ease, border .45s ease;\"></p>\n" +
+                "  </div><!--Fin de la division de linea-->\n" +
                 "\n" +
                 "\n" +
+                "  <table style=\"height: auto; width: 800px;\">\n" +
+                "    <tr>\n" +
+                "      <h4 style=\" color: #000000;\n" +
+                "      text-transform: uppercase;\n" +
+                "      font-size: 14px;\n" +
+                "      font-weight: 800;\n" +
+                "      text-align: center;\n" +
+                "      height: auto; width: 800px;\n" +
+                "      line-height: 1;\n" +
+                "      font-family: Tahoma, Geneva, Verdana, sans-serif;\n" +
+                "      letter-spacing: 0.1em;\n" +
+                "      margin: 0 0.9 1.5em;\n" +
+                "      transition: color .45s ease;\n" +
+                "      \">Envio del Reporte Final </h4>\n" +
+                "    </tr>\n" +
+                "  </table><!--Fin de los sub - encabezados-->\n" +
                 "\n" +
-                "  <table>\n" +
+                "\n" +
+                "  <table style=\"height: auto; width: 800px;\">\n" +
+                "\n" +
+                "    <tr>\n" +
+                "\n" +
+                "      <td style=\"width: 12%; text-align: right;\">\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Inicio del Proceso:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Correos - TO:</p>\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: right;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Correos - CC:</p>\n" +
+                "\n" +
+                "      </td><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "      <td style=\"width: 35%; text-align: left; \">\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: left;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    padding-left: 5em;\n" +
+                "                    line-height: 0.2;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: black;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">Fecha</p>\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: left;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    padding-left: 2em;\n" +
+                "                    line-height: 2.5;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: green;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">sistemas.automatizados@kranon.com\n" +
+                "        </p>\n" +
+                "\n" +
+                "        <p style=\" color: #000000;\n" +
+                "                    text-align: left;\n" +
+                "                    font-size: 10px;\n" +
+                "                    font-weight: 600;\n" +
+                "                    padding-left: 2em;\n" +
+                "                    line-height: 0.2;\n" +
+                "                    margin: 0 auto;\n" +
+                "                    color: green;\n" +
+                "                    text-decoration: solid;\n" +
+                "                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">kranoncloud@kranon.com</p>\n" +
                 "\n" +
                 "\n" +
+                "      </td><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "    </tr><!--Fin de los Textos de lado izquierdo :-->\n" +
+                "\n" +
+                "    <!--Fin de los Textos del 50% de la tabla lado derecho :-->\n" +
+                "\n" +
+                "  </table><!--Fin de la tabla Validacion de integridad de datos :-->\n" +
                 "\n" +
                 "\n" +
+                "  <div> <!--Inicio de la division-->\n" +
+                "    <p style=\"\n" +
+                "    height: auto; width: 800px;\n" +
+                "      border-bottom: 3px solid black;\n" +
+                "      \n" +
+                "      transition: color .45s ease, border .45s ease;\"></p>\n" +
+                "  </div><!--Fin de la division de linea-->\n" +
                 "\n" +
-                "    <td>\n" +
-                "      <tr>\n" +
                 "\n" +
+                "  <table width=\"height: auto; width: 800px;\">\n" +
+                "\n" +
+                "    <tr>\n" +
+                "      <td style=\"width: 28%; text-align: right;\">\n" +
                 "\n" +
                 "        <span style=\"\n" +
-                "    display: block;\n" +
-                "    color: dodgerblue;\n" +
-                "    font-size: 1.125em;\n" +
-                "    font-weight: 600;\n" +
-                "    line-height: 1.2;\n" +
-                "    margin: 2em 0 0;\n" +
-                "    transition: color .45s ease; box-sizing: border-box;\">\n" +
-                "          Visitar sitio web\n" +
-                "          <svg width=\"25\" height=\"16\" viewBox=\"0 0 25 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\" margin-left: .5em;\n" +
-                "      transition: transform .6s ease;\">\n" +
-                "            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\"\n" +
-                "              d=\"M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z\"\n" +
-                "              fill=\"#753BBD\" style=\" transition: fill .45s ease;\" />\n" +
-                "          </svg>\n" +
+                "      display: block;\n" +
+                "      color: dodgerblue;\n" +
+                "      font-size: 10px;\n" +
+                "      font-weight: 600;\n" +
+                "      line-height: 1.2;\n" +
+                "      transition: color .45s ease; box-sizing: border-box;\">\n" +
+                "      Visitar sitio web\n" +
                 "        </span>\n" +
                 "        </a>\n" +
+                "        <footer>\n" +
+                "          <div style=\"text-align: right ; margin-bottom: 2%;\">\n" +
                 "\n" +
-                "      </tr>\n" +
-                "    </td>\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "    <td>\n" +
-                "      <tr>\n" +
-                "\n" +
-                "        <footer style=\"align-items: left;\">\n" +
-                "          <div style=\"text-align: left\">\n" +
-                "\n" +
-                "            <a href=\"https://kranon.com/\" target=\"_blank\" style=\"text-decoration: none;  color: dodgerblue;\">\n" +
+                "            <a href=\"https://kranon.com/\" target=\"_blank\" style=\"text-decoration: none;  color: dodgerblue; font-size: 10px;\">\n" +
                 "              <Strong>Copyright (c) 2023, Promotora Kranon</Strong> </a>\n" +
                 "\n" +
                 "          </div>\n" +
-                "\n" +
                 "        </footer>\n" +
                 "\n" +
-                "      </tr>\n" +
-                "    </td>\n" +
+                "      </td>\n" +
                 "\n" +
-                "\n" +
-                "\n" +
+                "    </tr>\n" +
                 "  </table>\n" +
-                "\n" +
-                "\n" +
-                "  <table>\n" +
-                "\n" +
-                "    <td>\n" +
-                "\n" +
-                "      <tr>\n" +
-                "\n" +
-                "\n" +
-                "        <h3 style=\"color: #2E3C40;\n" +
-                "        font-size: 3.5em;\n" +
-                "        font-weight: 600;\n" +
-                "        line-height: 1;\n" +
-                "        padding-bottom: .5em;\n" +
-                "        padding-top: .5em;\n" +
-                "        margin: 0 0 0.142857143em;\n" +
-                "        border-bottom: 5px solid dodgerblue;\n" +
-                "        transition: color .45s ease, border .45s ease;\"></h3>\n" +
-                "\n" +
-                "      </tr>\n" +
-                "\n" +
-                "    </td>\n" +
-                "\n" +
-                "  </table>\n" +
-                "\n" +
-                "\n" +
-                "\n" +
                 "</body>\n" +
                 "\n" +
                 "</html>";
-
     }
 
 }

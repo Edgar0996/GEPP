@@ -5,7 +5,6 @@ import java.io.File;
 public class ModelCSV {
 
     /**Variables  */
-
     private int viNumCabeceras = 0;
     private String vsRutaLectura = "";
     private String vsRutaDestino = "";

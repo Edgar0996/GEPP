@@ -1,21 +1,27 @@
 package Kranon.GEPP.Local;
+import com.opencsv.bean.CsvBindAndSplitByName;
 import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
 
 public class ModelListaMarcacion {
 
     //Apuntamos hacia la cabecera dando el nombre de la cabecera, requiered para que sea obligatorio
 
-    @CsvBindByName(column = "inin-outbound-id" , required = false)
-    private String inin_out_id = "";
+    @CsvBindByName(column = "inin-outbound-id")
+    private String inin_outbound_id = "";
     @CsvBindByName(column = "idBodega" , required = false)
     private String idBodega = "";
     @CsvBindByName(column = "nud" , required = false)
     private String nud = "";
+    @CsvBindByName(column = "NOMBRE", required = false)
+    private String nombre = "";
     @CsvBindByName(column = "TELUNO" , required = false)
-    private String teluno = "";
+    private String TELUNO = "";
     @CsvBindByName(column = "TIPOTELUNO" , required = false)
     private String tipoteluno = "";
     @CsvBindByName(column = "TELDOS" , required = false)
+    private String teldos = "";
+    @CsvBindByName(column = "TIPOTELDOS" , required = false)
     private String tipoteldos = "";
     @CsvBindByName(column = "TELTRES" , required = false)
     private String teltres = "";
@@ -103,12 +109,12 @@ public class ModelListaMarcacion {
     private String AutomaticTimeZoneTELDOS = "";
 
 
-    public String getInin_out_id() {
-        return inin_out_id;
+    public String getInin_outbound_id() {
+        return inin_outbound_id;
     }
 
-    public void setInin_out_id(String inin_out_id) {
-        this.inin_out_id = inin_out_id;
+    public void setInin_outbound_id(String inin_outbound_id) {
+        this.inin_outbound_id = inin_outbound_id;
     }
 
     public String getIdBodega() {
@@ -127,12 +133,12 @@ public class ModelListaMarcacion {
         this.nud = nud;
     }
 
-    public String getTeluno() {
-        return teluno;
+    public String getTELUNO() {
+        return TELUNO;
     }
 
-    public void setTeluno(String teluno) {
-        this.teluno = teluno;
+    public void setTELUNO(String TELUNO) {
+        this.TELUNO = TELUNO;
     }
 
     public String getTipoteluno() {
@@ -141,6 +147,14 @@ public class ModelListaMarcacion {
 
     public void setTipoteluno(String tipoteluno) {
         this.tipoteluno = tipoteluno;
+    }
+
+    public String getTeldos() {
+        return teldos;
+    }
+
+    public void setTeldos(String teldos) {
+        this.teldos = teldos;
     }
 
     public String getTipoteldos() {
@@ -487,15 +501,16 @@ public class ModelListaMarcacion {
         AutomaticTimeZoneTELDOS = automaticTimeZoneTELDOS;
     }
 
-
     @Override
     public String toString() {
         return "ModelListaMarcacion{" +
-                "inin_out_id='" + inin_out_id + '\'' +
+                "inin_outbound_id='" + inin_outbound_id + '\'' +
                 ", idBodega='" + idBodega + '\'' +
                 ", nud='" + nud + '\'' +
-                ", teluno='" + teluno + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", TELUNO='" + TELUNO + '\'' +
                 ", tipoteluno='" + tipoteluno + '\'' +
+                ", teldos='" + teldos + '\'' +
                 ", tipoteldos='" + tipoteldos + '\'' +
                 ", teltres='" + teltres + '\'' +
                 ", tipoteltres='" + tipoteltres + '\'' +
@@ -541,8 +556,6 @@ public class ModelListaMarcacion {
                 ", AutomaticTimeZoneTELDOS='" + AutomaticTimeZoneTELDOS + '\'' +
                 '}';
     }
-
-
 }
 
 
