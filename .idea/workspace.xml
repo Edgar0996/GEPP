@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38c0647b-abfc-4c90-9c51-859a3c8a8280" name="Changes" comment="Se agregaron cambios en los metodos de validacion de de campos del csv--!">
+    <list default="true" id="38c0647b-abfc-4c90-9c51-859a3c8a8280" name="Changes" comment="Se agregaron cambios en los metod de validacion, se agrega el archivo html para el envio de correo electronico.&#10;&#10;se agrega clase para conexion a base de datos&#10;&#10;se agrega clase bean para el uso de opencsv">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSV/L1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/L1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSV/L2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/L2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSV/fileGenerated.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSV/L2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSV/linea.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs_Reporte.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs_Reporte.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conf.properties" beforeDir="false" afterPath="$PROJECT_DIR$/conf.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ModelCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ModelCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ModelListaMarcacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ModelListaMarcacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/MoveFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/MoveFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileGenerated.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/SendEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/SendEmail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ValidateFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ValidateFields.java" afterDir="false" />
     </list>
@@ -88,7 +84,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.ValidateFields">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="GEPP" />
@@ -156,8 +152,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
         <item itemvalue="Application.ValidateFields" />
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.PrepareFinalCsv" />
         <item itemvalue="Application.MoveFile" />
         <item itemvalue="Application.DBConnect" />
@@ -177,7 +173,8 @@
       <workItem from="1677482987460" duration="13117000" />
       <workItem from="1677523751502" duration="6844000" />
       <workItem from="1677571731086" duration="658000" />
-      <workItem from="1677630087028" duration="5236000" />
+      <workItem from="1677630087028" duration="5522000" />
+      <workItem from="1677796792157" duration="21713000" />
     </task>
     <task id="LOCAL-00001" summary="Se agregan los archivos iniciales del proyecto-mvn">
       <created>1676025294119</created>
@@ -207,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677110235848</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Se agregaron cambios en los metod de validacion, se agrega el archivo html para el envio de correo electronico.&#10;&#10;se agrega clase para conexion a base de datos&#10;&#10;se agrega clase bean para el uso de opencsv">
+      <created>1677653259949</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677653259949</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +233,8 @@
     <MESSAGE value="Se añade la funcionalidad de envio de correo electronico sin control de errores" />
     <MESSAGE value="Se agregan funcionalidad para nover archivos de directorios, y lectura de CSV" />
     <MESSAGE value="Se agregaron cambios en los metodos de validacion de de campos del csv--!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agregaron cambios en los metodos de validacion de de campos del csv--!" />
+    <MESSAGE value="Se agregaron cambios en los metod de validacion, se agrega el archivo html para el envio de correo electronico.&#10;&#10;se agrega clase para conexion a base de datos&#10;&#10;se agrega clase bean para el uso de opencsv" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregaron cambios en los metod de validacion, se agrega el archivo html para el envio de correo electronico.&#10;&#10;se agrega clase para conexion a base de datos&#10;&#10;se agrega clase bean para el uso de opencsv" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

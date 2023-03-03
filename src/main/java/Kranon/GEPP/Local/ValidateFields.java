@@ -1,24 +1,17 @@
 package Kranon.GEPP.Local;
 
+import com.opencsv.CSVParser;
+import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
-
-import com.opencsv.CSVReaderBuilder;
-import com.opencsv.bean.*;
-import com.opencsv.exceptions.CsvDataTypeMismatchException;
-import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 import com.opencsv.exceptions.CsvValidationException;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import sun.security.timestamp.TSRequest;
 
 import java.io.*;
-import java.lang.reflect.Field;
 import java.text.*;
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.List;
 import java.util.StringTokenizer;
-
 /**Use OpenCSV to read CSV Files
  **/
 
@@ -40,21 +33,21 @@ public class ValidateFields {
  private static String newpathFileCSVD = "";
  private static double pesoArchivo = 0D;
 
-
-    /** Lectura de CSV con BEANS en Java*/
+    /*
+     * Lectura de CSV con BEANS en Java
+     */
 
 
     /**
      * Recibe el numero de cabeceras en el metodo validarCabeceras();
      */
 
-    private void validarCabeceras (String fileToRead){
+    private void validarCabeceras (String fileToRead, int numCabeceras){
 
         int viCountEmpty = 0;
         int viCountFull = 0;
 
         File fileToread = new File(fileToRead);
-        int SETVINUMCABECERAS = 50;
 
         try {
 
@@ -62,11 +55,10 @@ public class ValidateFields {
 
             voLogger.info("validarCabeceras() --> NUMERO DE CABECERAS OBTENIDAS ---> ["+ viNumeroCabeceras +"]");
 
-            if (viNumeroCabeceras == SETVINUMCABECERAS){
+            if (viNumeroCabeceras == numCabeceras){
 
-                voLogger.info("validarCabeceras() --> EL NUMERO DE CABECERAS COINCIDE --> ["+ viNumeroCabeceras +"][" + SETVINUMCABECERAS+ "]");
+                voLogger.info("validarCabeceras() --> EL NUMERO DE CABECERAS COINCIDE --> ["+ viNumeroCabeceras +"][" + numCabeceras+ "]");
                 System.out.println("cabeceras coinciden");
-
                 System.out.println("Obteniendo los archivos del derectorio " + fileToread);
 
                 try {
@@ -82,7 +74,7 @@ public class ValidateFields {
 
                         String linea;
 
-                        while ((linea = lector.readLine())!= null) {
+                        while ((linea = br.readLine())!= null) {
                             viCountFull ++;
 
                             try{
@@ -93,7 +85,6 @@ public class ValidateFields {
                                 while (st.hasMoreTokens()) {
 
                                     String token = st.nextToken().trim();
-
                                     if (!token.equals("")) {
                                         linea_vacia = false;
                                         viCountEmpty ++;
@@ -103,14 +94,15 @@ public class ValidateFields {
 
                                 if (linea_vacia) {
 
-                                    String lineKO = comprobarColumnasrow(linea);
+                                    System.out.println("Ignorando linea vacia: " + linea);
 
                                 }else {
 
-                                    String linOK = comprobarColumnasrow(linea);
+                                    String linOK = comprobarColrow(linea);
 
                                     FileWriter writer = new FileWriter(newpathFileCSVD, true);
                                     writer.write(linOK +"\n");
+                                    writer.flush();
                                     writer.close();
                                 }
 
@@ -121,12 +113,13 @@ public class ValidateFields {
                         lector.close();
 
                         voLogger.info("validarCabeceras() --> NO SE ENCONTRARON MAS LINEAS PARA PROCESAR --> ["+ 0 +"]");
-                        voLogger.info("validarCabeceras() --> NUMERO DE LINEAS PROCESADAS  --> ["+ viCountFull +"], DESCARTADAS[" +viCountEmpty+ "], FILAS VACIAS["+ (viCountFull - viCountEmpty)+"]");
+                        voLogger.info("validarCabeceras() --> NUMERO DE LINEAS PROCESADAS  --> ["+ viCountFull +"], NUMERO DE FILAS VACIAS["+ (viCountFull - viCountEmpty)+"]");
+                        voLogger.info("validarCabeceras() --> NUEVO CSV CREADO EN RUTA --> ["+ newpathFileCSVD +"]");
 
                     }else{
 
-                        System.out.println("No existe el archivo no digas mamadas flaco---------------->");
-                        voLogger.warn("validarCabeceras() --> ESTE ARCHIVO NO EXISTE --> ["+ fileToRead + "]");
+                        System.out.println("No existe el archivo --------------->");
+                        voLogger.warn("validarCabeceras() --> ESTE ARCHIVO NO EXISTE O NO ESTA EN ESTE DIRECTORIO--> ["+ fileToRead + "]");
                     }
 
                 } catch (IOException q) {
@@ -135,7 +128,6 @@ public class ValidateFields {
                 }catch (Exception d){
                     voLogger.error("validarCabeceras() --> EXCEPTION --> ["+ d.getMessage() + "]");
                 }
-
             } else {
 
                 System.out.println("cabeceras no coinciden !");
@@ -143,22 +135,19 @@ public class ValidateFields {
             }
 
         } catch (Exception e){
-
             e.printStackTrace();
-            voLogger.error("validarCabeceras() --> EXCEPTION[L168]--> ["+ e.getMessage() + "]");
-
+            voLogger.error("validarCabeceras() --> EXCEPTION--> ["+ e.getMessage() + "]");
         }
             //Obtenemos el numero de lineas impresas del CSV generado
-
             File file = new File(newpathFileCSVD);
             int viRowsPrinted = getRowsPrinted(newpathFileCSVD);
-            voLogger.info("validarCabeceras() --> NUMERO DE LINEAS IMPRESAS  --> ["+ viRowsPrinted  +"], RUTA DEL ARCHIVO LEIDO["+  file +"]" );
-
+            voLogger.info("validarCabeceras() --> NUMERO DE LINEAS IMPRESAS  --> ["+ viRowsPrinted +"], RUTA DEL ARCHIVO LEIDO["+  file +"]" );
     }
 
 
-
     private int getRowsPrinted(String file)  {
+
+        voLogger.error("getRowsPrint() --> OBTENIENDO EL NUMERO DE FILAS IMPRESAS");
 
         int viRowsPrinted = 0 ;
         try{
@@ -168,7 +157,6 @@ public class ValidateFields {
                 BufferedReader bfLector = new BufferedReader(new FileReader(csv));
                 String linea ;
                 while ((linea = bfLector.readLine()) != null){
-
                     if (!linea.equals("")){
                         viRowsPrinted++;
                     }
@@ -178,46 +166,65 @@ public class ValidateFields {
 
                 voLogger.warn("getRowsPrint() --> ESTE ARCHIVO NO EXISTE --> ["+ csv + "]");
             }
-
         }catch (IOException e){
-            e.printStackTrace();
             voLogger.error("getRowsPrint() --> IOEXCEPTION --> ["+ e.getMessage() + "]");
         }
-
-        System.out.println("Number of rows: " + viRowsPrinted);
+        System.out.println("NUMERO DE FILAS IMPRESAS: " + viRowsPrinted);
         return viRowsPrinted;
     }
 
-    private String comprobarColumnasrow(String linea) {
+    private String comprobarColrow(String linea)  {
 
+        int columempty = 0 ;
+        int columfull = 0 ;
+        int suma = 0;
         String lineaOK = "";
-        try {
 
-            String[] columns = linea.split(",");
-            int columnCount = columns.length;
+        try{
 
-            if (columnCount == 50 ){
-                lineaOK = linea;
-                //System.out.println(columnCount + linea);
-            }else{
-                System.out.println("Linea no cumple con la condicion");
+            CSVParser parser = new CSVParserBuilder().withSeparator(',')
+                    .withQuoteChar(CSVParser.DEFAULT_QUOTE_CHARACTER)
+                    .build();
+
+            String[] valores = parser.parseLine(linea);
+            
+            for (String valore : valores){
+                if (!valore.equals("")){
+                    columfull ++;
+                }else{
+                    columempty ++;
+                }
             }
 
-        }catch (Exception w ){
-            voLogger.error("comprobarColumnasrow() --> EXCEPTION --> ["+ w.getMessage() + "]");
+            suma = (columfull + columempty); //SUMAR LAS COLUMNAS VACIAS Y NO VACIAS
+            
+        } catch (Exception e){
+            voLogger.error("comprobarColrow() --> EXCEPTION - ERROR AL PARSEAR LA FILA --> ["+ e.getMessage() + "]");
         }
 
+        try {
+
+            if (columfull + columempty == 50){
+
+                lineaOK = linea;
+                System.out.println("Regresando Linea con :" + suma + " Columnas" + linea);
+
+            }else{
+                System.out.println("La linea no cumple con las columnas requeridas");
+            }
+        }catch (Exception w){
+            voLogger.error("comprobarColrow() --> EXCEPTION --> ["+ w.getMessage() + "]");
+        }
         return lineaOK;
     }
     private int leerCabecera(String pathFileCSV) {
 
-        voLogger.info("leerCabecera() --> INICIANDO LA LECTURA DE CABECERAS");
+        voLogger.info("leerCabecera() --> INICIANDO LECTURA DE CABECERAS");
         voLogger.info("leerCabecera() --> RUTA DE LECTURA DE ARCHIVO=[" + pathFileCSV+ "]");
 
         System.out.println("leerCabecera() --> RUTA DE LECTURA DE ARCHIVO=[" + pathFileCSV+ "]");
 
         int numeroDeCabeceras = 0 ;
-        String nombreCabeceras = "";
 
         try {
 
@@ -225,7 +232,7 @@ public class ValidateFields {
 
             if (file.exists()) {
 
-                System.out.println("leerCabecera() --> ARCHIVO EXISTE. [" + pathFileCSV+ "]");
+                System.out.println("leerCabecera() --> ARCHIVO EXISTE EN=[" + pathFileCSV+ "]");
 
                 if (file.length() != 0){
 
@@ -242,6 +249,7 @@ public class ValidateFields {
 
                     System.out.println("leerCabecera() --> EL ARCHIVO CONTIENE=[" + pesoArchivo + "KB]");
                     numeroDeCabeceras = lineaCabecera.length;
+                    br.close();
 
                 }else{
 
@@ -282,11 +290,11 @@ public class ValidateFields {
         -------------------------------
          **/
 
-        pathFileCSV = new File("").getAbsolutePath() + File.separator + "CSV\\L2.csv";
-        newpathFileCSVD = new File("").getAbsolutePath() + File.separator + "CSV\\linea.csv";
+        pathFileCSV = new File("").getAbsolutePath() + File.separator + "CSV\\LM_Genesys.csv";
+        newpathFileCSVD = new File("").getAbsolutePath() + File.separator + "CSV\\LM_Normalizada.csv";
 
         ValidateFields va = new ValidateFields();
-        va.validarCabeceras(pathFileCSV);
+        va.validarCabeceras(pathFileCSV, 50);
 
     }
 }
