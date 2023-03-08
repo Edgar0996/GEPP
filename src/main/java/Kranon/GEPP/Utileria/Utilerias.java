@@ -25,9 +25,10 @@ public class Utilerias {
         System.setProperty("dateLog", new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime()));
     }
 
+    private static final org.apache.log4j.Logger voLogger = org.apache.log4j.LogManager.getLogger("Reporte");
 
 
-    private static final Logger voLogger = LogManager.getLogManager().getLogger("Reporte");
+
     private  String vsPathConfiguration = ModelEmail.pathConfigurations + File.separator +"conf.properties";
 
 
@@ -60,7 +61,7 @@ public class Utilerias {
 
         }catch (Exception e){
 
-            voLogger.severe("[" +  vsUUI +  " Error Exception]");
+            voLogger.error("[" +  vsUUI +  " Error Exception]");
             System.out.println(e.getMessage());
             e.printStackTrace();
             return false;

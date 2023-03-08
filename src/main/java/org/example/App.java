@@ -1,22 +1,31 @@
 package org.example;
-
-
-
 import Kranon.GEPP.Local.SendEmail;
 import Kranon.GEPP.Utileria.ModelEmail;
 import Kranon.GEPP.Utileria.Utilerias;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import javax.mail.MessagingException;
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 /**
  * Hello world!
  *
  */
-public class App
+public class App {
 
 
-{
+
+    static {
+
+        System.setProperty("datelog", new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime()));
+    }
+    private static final Logger voLogger = LogManager.getLogger("Reporte");
+
+
+
     public static void main( String[] args ) throws MessagingException {
 
         System.out.println("Ejecucion pricipal del programa ---> "  );

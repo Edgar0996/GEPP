@@ -1,22 +1,24 @@
 package Kranon.GEPP.Local;
 
+import Kranon.GEPP.Utileria.ModelEmail;
 import com.mysql.cj.jdbc.Driver;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 public class DBConnect {
+
+    //Instacia de la clase ModelEmail --> para el uso de los metodos get, set y construcotres
+
+    ModelEmail voMoEmail = new ModelEmail();
 
     //Variables para la conexion a la base de datos
     private String url = "jdbc:mysql://localhost:3306/emailinfo";
     private String username = "root";
     private String password = "root";
 
-
     public DBConnect() {
-
+        //Constructor vacio
     }
 
     public String obtenerConexion() throws SQLException{
@@ -30,69 +32,74 @@ public class DBConnect {
 
 
             Connection connection = DriverManager.getConnection(url, username, password);
-            System.out.println("Abrindo la conexion a la base de datos --->");
+            System.out.println("ABRIENDO LA CONEXION A LA BASE DE DATOS --->");
 
-
+            String query = "select desclog from process_log where id='12345' and  categoryLog = 'DownloadSFTP';";
             Statement st = connection.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM mailcontent");
-            System.out.println("Enviando Consulta  SELECT * FROM mailcontent --->");
-
-
+            ResultSet rs = st.executeQuery(query);
+            System.out.println("ENVIANDO CONSULTA ---> " + query);
 
             //System.out.println("Conectado Exitosamente!");
-            status = "Succesfull Conection to database";
+            status = "CONEXION ENLAZADA EXITOSAMENTE [OK]";
             printStatus(status);
 
             List<String> lista = new ArrayList<String>();
-
             List<List<Integer>> dsa = new ArrayList<List<Integer>>();
 
-
-            int id = 0;
-            String columnIndex1 = "";
-            String columnIndex2 = "";
-            String columnIndex3 = "";
-            String columnIndex4 = "";
-
+            String vsInicioProcesoRD = voMoEmail.getVsInicioProcesoRD();
+            String vsConexionSFTP = voMoEmail.getVsConexionSFTPRD();
+            String vsArchDescargados = voMoEmail.getVsArchDescargadosRD();
 
             while (rs.next()){
 
                // System.out.println(rs.getInt(1) +" " +  rs.getString(2)+" " + rs.getString(3)+" " +rs.getString(4)+" " +rs.getString(5));
+               // id = rs.getInt(1);
+                vsInicioProcesoRD = rs.getString(2);
+                vsConexionSFTP = rs.getString(3);
+                vsArchDescargados = rs.getString(4);
 
-                id = rs.getInt(1);
-                columnIndex1 = rs.getString(2);
-                columnIndex2 = rs.getString(3);
-                columnIndex3 = rs.getString(4);
-                columnIndex4 = rs.getString(5);
+                voMoEmail.setVsFechaReporte(rs.getString(5));
 
-                System.err.println( "id:" + id +" "+ columnIndex1 +" "+ columnIndex2+" "+ columnIndex3+" "+ columnIndex4);
+                System.err.print("[RESULTADO DE LA BASE DE DATOS]");
+                System.err.println("[id:id "+ vsInicioProcesoRD +" "+ vsConexionSFTP+" "+ vsArchDescargados+" "+ voMoEmail.getVsFechaReporte() + "]");
+                System.err.println();
+
             }
 
-
-            System.out.println("Cerrando la conexion a la base de datos --->");
+            System.out.println("CERRANDO LA CONEXION DE LA BASE DE DATOS --->");
             connection.close();
-
 
         } catch (Exception e){
             e.printStackTrace();
-            status = "No conectado";
+            status = "NO CONECTADO [ERROR CONECTION]";
             printStatus(status);
             //System.out.println("No Conectado Exitosamente!");
-
         }
+
 
         return status;
     }
-
-    public void printStatus(String status) throws SQLException {
+    public void printStatus(String status) {
         String stado = status;
         System.out.println(stado);
     }
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args)  {
 
-        DBConnect nea = new DBConnect();
-        nea.obtenerConexion();
+        try{
+
+            System.out.println("EXTRAYENDO INFORMACION DE LA BASE DE DATOS");
+
+            DBConnect nea = new DBConnect();
+            nea.obtenerConexion();
+
+            System.out.println("FIN DEL PROCESO HACIA LA BASE DE DATOS");
+
+        }catch (SQLException e){
+            System.out.println("[Error en la base de datos], Error Message[" + e.getMessage() + " ]");
+            e.printStackTrace();
+        }
+
 
     }
 

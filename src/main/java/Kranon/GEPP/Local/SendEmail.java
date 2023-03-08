@@ -3,6 +3,8 @@ package Kranon.GEPP.Local;
 
 import Kranon.GEPP.Utileria.ModelEmail;
 import Kranon.GEPP.Utileria.Utilerias;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -17,14 +19,14 @@ import static Kranon.GEPP.Utileria.Utilerias.RecuperaArhivoConf;
 public class SendEmail {
 
     static {
-
         System.setProperty("datelog", new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime()));
     }
-
     private Utilerias voUtil = new Utilerias();
     private Map<String, String> voMapConfiguration = new HashMap<String, String>();
-    private static final org.apache.log4j.Logger voLoggers = org.apache.log4j.LogManager.getLogger("Reporte");
-    public boolean sendMailCloudKranon(String asunto, String vsUII) throws MessagingException {
+    private static final Logger voLoggers = LogManager.getLogger("Reporte");
+
+
+    public boolean sendMailCloudKranon(String asunto, String vsUII) {
 
         Utilerias voUtil = new Utilerias();
         String vsUUI = vsUII;
@@ -63,7 +65,6 @@ public class SendEmail {
             props.put("mail.smtp.starttls.enable", mailEnable);
             props.put("mail.smtp", username);
 
-
             voLoggers.info("sendMailCloudKranon()--> AUTENTICANDO CON LAS CREDENCIALES PASSWORD Y USERNAME");
             Authenticator auth = new Authenticator() {
                 //override the getPasswordAuthentication method
@@ -75,9 +76,7 @@ public class SendEmail {
             Session sesion = Session.getDefaultInstance(props, auth);
             voLoggers.info("sendMailCloudKranon()--> SESION CREADA EXITOSAMENTE --> [" + sesion + "]" );
             sendMail(sesion, recipients, asunto);
-
         }
-
         return true;
     }
 
@@ -133,8 +132,7 @@ public class SendEmail {
     }  */
 
 
-    private static void sendMail(Session sesion, String recipients, String asunto) throws MessagingException {
-
+    private static void sendMail(Session sesion, String recipients, String asunto) {
         try {
 
             Message msg = new MimeMessage(sesion);
@@ -153,9 +151,8 @@ public class SendEmail {
             msg.setContent(getBodyHtml(), "text/html");
 
             System.out.println("Sending mensaje...............");
-            voLoggers.info("sendMail()--> ENVIANDO CORREO ELECTRONICO DE REPORTE FINAL");
+            voLoggers.info("sendMail()--> ENVIANDO CORREO ELECTRONICO DE REPORTE FINAL................");
             Transport.send(msg);
-
             System.out.println("Sent message successfully....");
 
         }catch (MessagingException  mex){
@@ -164,10 +161,9 @@ public class SendEmail {
         }catch (Exception e){
             voLoggers.error("sendMail()--> ERROR DE CAPTURA DE EXCEPTION " + e.getMessage());
         } finally {
-            voLoggers.info("sendMail()--> CORREO ENVIADO EXITOSAMENTE");
+            voLoggers.info("sendMail()--> CORREO ENVIADO EXITOSAMENTE A LOS DESTINATARIOS");
             System.out.println("Correo enviado de manera satisfactoria");
         }
-
     }
 
     private static String getBodyHtml(){

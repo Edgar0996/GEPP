@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38c0647b-abfc-4c90-9c51-859a3c8a8280" name="Changes" comment="Se modifico la clase de validar filas y columnas del csv &#10;&#10;cambios en el diseño del reporte via email - HTML">
+    <list default="true" id="38c0647b-abfc-4c90-9c51-859a3c8a8280" name="Changes" comment="Se modifico la clase de validar filas y columnas del csv para imprimir el csv sin duplicados despues de terminar el proceso de verificacion &#10;&#10;cambios en el diseño del reporte via email - HTML&#10;&#10;se agregaron logs en la clase de envio de correo electronico">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSV/L1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSV/LM_Genesys.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/LM_Genesys.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSV/LM_Normalizada.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSV/Lista1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSV/Lista2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSV/empty.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs_Reporte.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs_Reporte.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf.properties" beforeDir="false" afterPath="$PROJECT_DIR$/conf.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ListaMarcacionBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ListaMarcacionBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ModelListaMarcacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ModelListaMarcacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/DBConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/DBConnect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/SendEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/SendEmail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ValidateFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Local/ValidateFields.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Utileria/ModelEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Utileria/ModelEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Utileria/Utilerias.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Kranon/GEPP/Utileria/Utilerias.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,24 +68,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Proyectos Java/GEPP&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindowRun.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Proyectos Java/GEPP",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.ValidateFields">
+}]]></component>
+  <component name="RunManager" selected="Application.DBConnect">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="GEPP" />
@@ -107,8 +99,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListaMarcacionBean" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kranon.GEPP.Local.ListaMarcacionBean" />
+    <configuration name="DBConnect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kranon.GEPP.Local.DBConnect" />
       <module name="GEPP" />
       <extension name="coverage">
         <pattern>
@@ -120,8 +112,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MoveFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kranon.GEPP.Local.MoveFile" />
+    <configuration name="ListaMarcacionBean" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Kranon.GEPP.Local.ListaMarcacionBean" />
       <module name="GEPP" />
       <extension name="coverage">
         <pattern>
@@ -161,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ValidateFields" />
+        <item itemvalue="Application.DBConnect" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.ValidateFields" />
         <item itemvalue="Application.ListaMarcacionBean" />
         <item itemvalue="Application.PrepareFinalCsv" />
-        <item itemvalue="Application.MoveFile" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +181,8 @@
       <workItem from="1677923127814" duration="8334000" />
       <workItem from="1678007288627" duration="7498000" />
       <workItem from="1678146210383" duration="12536000" />
-      <workItem from="1678213269479" duration="15844000" />
+      <workItem from="1678213269479" duration="15987000" />
+      <workItem from="1678291896639" duration="17867000" />
     </task>
     <task id="LOCAL-00001" summary="Se agregan los archivos iniciales del proyecto-mvn">
       <created>1676025294119</created>
@@ -233,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677846669318</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Se modifico la clase de validar filas y columnas del csv para imprimir el csv sin duplicados despues de terminar el proceso de verificacion &#10;&#10;cambios en el diseño del reporte via email - HTML&#10;&#10;se agregaron logs en la clase de envio de correo electronico">
+      <created>1678260981377</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678260981377</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +257,8 @@
     <MESSAGE value="Se agregaron cambios en los metodos de validacion de de campos del csv--!" />
     <MESSAGE value="Se agregaron cambios en los metod de validacion, se agrega el archivo html para el envio de correo electronico.&#10;&#10;se agrega clase para conexion a base de datos&#10;&#10;se agrega clase bean para el uso de opencsv" />
     <MESSAGE value="Se modifico la clase de validar filas y columnas del csv &#10;&#10;cambios en el diseño del reporte via email - HTML" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se modifico la clase de validar filas y columnas del csv &#10;&#10;cambios en el diseño del reporte via email - HTML" />
+    <MESSAGE value="Se modifico la clase de validar filas y columnas del csv para imprimir el csv sin duplicados despues de terminar el proceso de verificacion &#10;&#10;cambios en el diseño del reporte via email - HTML&#10;&#10;se agregaron logs en la clase de envio de correo electronico" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se modifico la clase de validar filas y columnas del csv para imprimir el csv sin duplicados despues de terminar el proceso de verificacion &#10;&#10;cambios en el diseño del reporte via email - HTML&#10;&#10;se agregaron logs en la clase de envio de correo electronico" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

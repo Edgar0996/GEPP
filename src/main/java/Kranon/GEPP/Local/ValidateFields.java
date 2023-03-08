@@ -125,12 +125,16 @@ public class ValidateFields {
                         lector.close();
                         br.close();
 
+                        try {
 
-                        for (String linOK: vlRowsToPrint){
-                            FileWriter writer = new FileWriter(newpathFileCSVD, true);
-                            writer.write(linOK +"\n");
-                            writer.flush();
-                            writer.close();
+                            for (String linOK: vlRowsToPrint){
+                                FileWriter writer = new FileWriter(newpathFileCSVD, true);
+                                writer.write(linOK +"\n");
+                                writer.flush();
+                                writer.close();
+                            }
+                        } catch (IOException e)   {
+                            voLogger.error("validarCabeceras() --> ERORR AL ESCRIBIR EL ARCHIVO NUEVO  --> ["+ newpathFileCSVD +"], IOEXCEPTION=["+e.getMessage()+"]");
                         }
 
                         voLogger.info("validarCabeceras() --> NO SE ENCONTRARON MAS LINEAS PARA PROCESAR --> ["+ 0 +"]");
@@ -169,7 +173,7 @@ public class ValidateFields {
 
     private int getRowsPrinted(String file) throws IOException {
 
-        voLogger.error("getRowsPrinted() --> OBTENIENDO EL NUMERO DE FILAS IMPRESAS");
+        voLogger.info("getRowsPrinted() --> OBTENIENDO EL NUMERO DE FILAS IMPRESAS");
 
         Set<String> uniqueItems = new HashSet<String>();
         List<String> uniqueItemsPrin = new ArrayList<String>();
