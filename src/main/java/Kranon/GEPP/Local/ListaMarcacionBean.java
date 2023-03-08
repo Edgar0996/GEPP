@@ -1,20 +1,33 @@
 package Kranon.GEPP.Local;
 
-import com.opencsv.bean.CsvToBean;
-import com.opencsv.bean.CsvToBeanBuilder;
-import com.opencsv.bean.FuzzyMappingStrategyBuilder;
-import com.opencsv.bean.MappingStrategy;
+import com.opencsv.*;
+import com.opencsv.bean.*;
+import com.opencsv.exceptions.CsvDataTypeMismatchException;
+import com.opencsv.exceptions.CsvException;
+import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
+import com.opencsv.exceptions.CsvValidationException;
 
-import java.io.FileReader;
+import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetDecoder;
+import java.nio.charset.CharsetEncoder;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class ListaMarcacionBean {
 
     public ListaMarcacionBean(){
 
     }
-
-
 
 
     /*
@@ -53,25 +66,10 @@ public class ListaMarcacionBean {
                             throw new RuntimeException(e);
 
                         } catch (CsvDataTypeMismatchException e) {
-                            throw new RuntimeException(e);
-                        }
 
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-    *
-    * */
-
-
-    /*
-     *
+         *
+         *
+         *
      * Guarda informacion del csv leido en un bean
      * withIgnoreEmptyLine -- Ignora las lineas en blanco
      *
@@ -99,18 +97,97 @@ public class ListaMarcacionBean {
                         System.out.println("Informacion retenniada en un Bean");
 
      *
-     *
-     *
-     *
-     *
-     *
-     *
-     *
-     *
      **/
 
 
+    public static void main(String[] args) throws IOException, CsvException {
 
+        String pathFile = new File("").getAbsolutePath() + File.separator + "CSV\\LM_Genesys.csv";
+
+
+        try {
+        /*Para el uso de openCSV se puede usar un modelo iterador o leer todas las lineas a la vez*/
+        System.out.println("Inicio de lectura a un bean -->");
+        System.out.println("Accediento al archivo en: " + pathFile);
+
+        MappingStrategy<ModelListaMarcacion> strategy = new ColumnPositionMappingStrategy<>();
+        strategy.setType(ModelListaMarcacion.class);
+
+
+
+
+        List<ModelListaMarcacion> vlListaMarcaciones = new CsvToBeanBuilder<ModelListaMarcacion>(new FileReader(pathFile))
+                    .withMappingStrategy(strategy)
+                    .withIgnoreEmptyLine(true)
+                    .build()
+                    .parse();
+
+
+            for ( ModelListaMarcacion vl : vlListaMarcaciones
+                 ) {
+                System.out.println(vl.toString());
+
+            }
+
+            Writer writer = new FileWriter("archivo.csv");
+
+
+            StatefulBeanToCsv<ModelListaMarcacion> beanToCsv = new StatefulBeanToCsvBuilder<ModelListaMarcacion>(writer)
+                    .withMappingStrategy(strategy)
+                    .withOrderedResults(true)
+                    .build();
+
+            beanToCsv.write(vlListaMarcaciones);
+            writer.close();
+
+
+
+            String csvFile = "archivo.csv";
+            String outputFile = "output.csv";
+            String line = "";
+            BufferedReader br = null;
+            OutputStreamWriter osw = null;
+
+
+            try {
+                // Crear FileReader y BufferedReader para leer el archivo CSV
+                br = new BufferedReader(new FileReader(csvFile));
+
+                // Crear OutputStreamWriter para escribir en un archivo con la codificación UTF-8
+                osw = new OutputStreamWriter(Files.newOutputStream(Paths.get(outputFile)), StandardCharsets.UTF_8);
+
+                // Leer cada línea del archivo CSV y escribirla en el archivo de salida con UTF-8
+                while ((line = br.readLine()) != null) {
+                    osw.write(line + "\n");
+                }
+
+                System.out.println("Archivo CSV leído y codificado a UTF-8 exitosamente!");
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (br != null) {
+                        br.close();
+                    }
+                    if (osw != null) {
+                        osw.close();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+       // System.out.println(bean.toString());
+
+        }catch ( IOException e ) {  e.printStackTrace();
+
+        } catch (CsvRequiredFieldEmptyException   | CsvDataTypeMismatchException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
 
 
 

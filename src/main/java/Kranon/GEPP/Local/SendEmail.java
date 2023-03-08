@@ -26,22 +26,22 @@ public class SendEmail {
     private static final org.apache.log4j.Logger voLoggers = org.apache.log4j.LogManager.getLogger("Reporte");
     public boolean sendMailCloudKranon(String asunto, String vsUII) throws MessagingException {
 
-
-
-
         Utilerias voUtil = new Utilerias();
-
         String vsUUI = vsUII;
+
+        voLoggers.info("sendMailCloudKranon()--> INICIO DE PROCESO: ENVIO DE REPORTE FINAL VIA EMAIL");
+        voLoggers.info("sendMailCloudKranon()--> BUSCANDO LOS ARCHIVOS DE CONFIGURACION");
 
         Map<String, String> voMapConfiguration = RecuperaArhivoConf(vsUUI);
 
-
-        if (voMapConfiguration.size() <= 0 ){
+        if (voMapConfiguration.size() == 0 ){
 
             System.out.println("vacio o no encuentra nada");
+            voLoggers.info("sendMailCloudKranon()--> NO SE ENCONTRARON ARCHIVOS DE CONFIGURACION");
 
         } else {
 
+            voLoggers.info("sendMailCloudKranon()--> LEYENDO LOS ARCHIVOS DE CONFIGURACION");
 
             voUtil.getProperties(voMapConfiguration, "");
             final String username = voMapConfiguration.get("MailUsername");
@@ -64,6 +64,7 @@ public class SendEmail {
             props.put("mail.smtp", username);
 
 
+            voLoggers.info("sendMailCloudKranon()--> AUTENTICANDO CON LAS CREDENCIALES PASSWORD Y USERNAME");
             Authenticator auth = new Authenticator() {
                 //override the getPasswordAuthentication method
                 protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
@@ -72,17 +73,13 @@ public class SendEmail {
             };
 
             Session sesion = Session.getDefaultInstance(props, auth);
-            System.out.println("creado!");
-
-            sendMail(sesion, recipients, "Resumen de ejecucion Reporte GEPP", "resumen de reporte");
+            voLoggers.info("sendMailCloudKranon()--> SESION CREADA EXITOSAMENTE --> [" + sesion + "]" );
+            sendMail(sesion, recipients, asunto);
 
         }
 
         return true;
     }
-
-
-
 
     /**
     public static void main(String[] args) throws MessagingException {
@@ -133,20 +130,14 @@ public class SendEmail {
 
         sendMail(sesion, MailDestinatario, "Resumen de ejecucion Reporte GEPP", "resumen de reporte");
 
-
-
-
-
-
-
-
     }  */
 
-    private static void sendMail(Session sesion, String recipients, String texto, String textodos) throws MessagingException {
+
+    private static void sendMail(Session sesion, String recipients, String asunto) throws MessagingException {
 
         try {
 
-            MimeMessage msg = new MimeMessage(sesion);
+            Message msg = new MimeMessage(sesion);
             String[] parts = recipients.split(",");
             ArrayList<String> email = new ArrayList<String>(Arrays.asList(parts));
             InternetAddress[] address = new InternetAddress[email.size()];
@@ -155,27 +146,28 @@ public class SendEmail {
                 address[i] = new InternetAddress(email.get(i));
             }
 
+            voLoggers.info("sendMail()--> SE HAN ENCONTRADO " + address.length+ " DIRECCIONES DE CORREO ELECTRONICO PARA SU ENVIO --> [" +Arrays.toString(address)+"]");
+
             msg.addRecipients(Message.RecipientType.TO, address);
-         //   msg.setFrom(new InternetAddress("vzzlor@gmail.com"));
-            msg.setSubject(texto);
+            msg.setSubject(asunto);
             msg.setContent(getBodyHtml(), "text/html");
 
             System.out.println("Sending mensaje...............");
+            voLoggers.info("sendMail()--> ENVIANDO CORREO ELECTRONICO DE REPORTE FINAL");
             Transport.send(msg);
+
             System.out.println("Sent message successfully....");
 
         }catch (MessagingException  mex){
-            mex.printStackTrace();
-            voLoggers.error("No se envio el correo electronico" + mex.getMessage());
-        }catch (Exception e){
-            e.printStackTrace();
-            voLoggers.error("Error de Exception " + e.getMessage());
+            voLoggers.error("sendMail()--> NO SE ENVIO EL CORREO ELECTRONICO DEL REPORTE FINAL" + mex.getMessage());
 
+        }catch (Exception e){
+            voLoggers.error("sendMail()--> ERROR DE CAPTURA DE EXCEPTION " + e.getMessage());
+        } finally {
+            voLoggers.info("sendMail()--> CORREO ENVIADO EXITOSAMENTE");
+            System.out.println("Correo enviado de manera satisfactoria");
         }
 
-        voLoggers.info("Correo enviado de manera satisfactoria");
-
-        System.out.println("Correo enviado de manera satisfactoria");
     }
 
     private static String getBodyHtml(){

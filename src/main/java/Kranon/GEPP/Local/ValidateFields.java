@@ -8,10 +8,10 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.text.*;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.StringTokenizer;
+import java.util.*;
+
 /**Use OpenCSV to read CSV Files
  **/
 
@@ -31,6 +31,8 @@ public class ValidateFields {
 
  private static String pathFileCSV = "";
  private static String newpathFileCSVD = "";
+ private static String newpathFileCSVSIN = "";
+
  private static double pesoArchivo = 0D;
 
     /*
@@ -42,7 +44,7 @@ public class ValidateFields {
      * Recibe el numero de cabeceras en el metodo validarCabeceras();
      */
 
-    private void validarCabeceras (String fileToRead, int numCabeceras){
+    private void validarCabeceras (String fileToRead, int numCabeceras) throws IOException {
 
         int viCountEmpty = 0;
         int viCountFull = 0;
@@ -67,12 +69,13 @@ public class ValidateFields {
 
                         voLogger.info("validarCabeceras() --> LEYENDO LA INFORMACION DEL ARCHIVO--> ["+ fileToread +"]");
                         BufferedReader br = new BufferedReader(new FileReader(fileToread));
-
                         FileInputStream archivo = new FileInputStream(fileToread);
-                        InputStreamReader lectorStream = new InputStreamReader(archivo, "UTF-8");
+                        InputStreamReader lectorStream = new InputStreamReader(archivo, StandardCharsets.UTF_8);
                         BufferedReader lector = new BufferedReader(lectorStream);
 
                         String linea;
+
+                        List<String> vlRowsToPrint = new ArrayList<String>();
 
                         while ((linea = br.readLine())!= null) {
                             viCountFull ++;
@@ -99,18 +102,36 @@ public class ValidateFields {
                                 }else {
 
                                     String linOK = comprobarColrow(linea);
+                                    vlRowsToPrint.add(linOK); //Se agregan las lineas limpiadas a la linea vlRowsToPrint
 
-                                    FileWriter writer = new FileWriter(newpathFileCSVD, true);
-                                    writer.write(linOK +"\n");
-                                    writer.flush();
-                                    writer.close();
+                                    /*
+                                     *
+                                     FileWriter writer = new FileWriter(newpathFileCSVD, true);
+                                     writer.write(linOK +"\n");
+                                     writer.flush();
+                                     writer.close();
+                                     *
+                                     */
+
+
                                 }
 
                             }catch (Exception w){
                                 voLogger.warn("validarCabeceras() --> HA OCURRIDO UNA EXCEPCION --> ["+ w.getMessage() + "]");
                             }
                         }
+                        archivo.close();
+                        lectorStream.close();
                         lector.close();
+                        br.close();
+
+
+                        for (String linOK: vlRowsToPrint){
+                            FileWriter writer = new FileWriter(newpathFileCSVD, true);
+                            writer.write(linOK +"\n");
+                            writer.flush();
+                            writer.close();
+                        }
 
                         voLogger.info("validarCabeceras() --> NO SE ENCONTRARON MAS LINEAS PARA PROCESAR --> ["+ 0 +"]");
                         voLogger.info("validarCabeceras() --> NUMERO DE LINEAS PROCESADAS  --> ["+ viCountFull +"], NUMERO DE FILAS VACIAS["+ (viCountFull - viCountEmpty)+"]");
@@ -135,46 +156,97 @@ public class ValidateFields {
             }
 
         } catch (Exception e){
-            e.printStackTrace();
             voLogger.error("validarCabeceras() --> EXCEPTION--> ["+ e.getMessage() + "]");
-        }
+        } finally {
             //Obtenemos el numero de lineas impresas del CSV generado
             File file = new File(newpathFileCSVD);
             int viRowsPrinted = getRowsPrinted(newpathFileCSVD);
             voLogger.info("validarCabeceras() --> NUMERO DE LINEAS IMPRESAS  --> ["+ viRowsPrinted +"], RUTA DEL ARCHIVO LEIDO["+  file +"]" );
+        }
+
+        //return variableBoolean;
     }
 
+    private int getRowsPrinted(String file) throws IOException {
 
-    private int getRowsPrinted(String file)  {
+        voLogger.error("getRowsPrinted() --> OBTENIENDO EL NUMERO DE FILAS IMPRESAS");
 
-        voLogger.error("getRowsPrint() --> OBTENIENDO EL NUMERO DE FILAS IMPRESAS");
+        Set<String> uniqueItems = new HashSet<String>();
+        List<String> uniqueItemsPrin = new ArrayList<String>();
 
         int viRowsPrinted = 0 ;
         try{
             File csv = new File(file);
             if (csv.exists()){
-
                 BufferedReader bfLector = new BufferedReader(new FileReader(csv));
                 String linea ;
                 while ((linea = bfLector.readLine()) != null){
+                    String element = obtenerElements(linea);
+
+                    if (uniqueItems.contains(element)){
+                        //System.out.println("Valor Duplicado Encontrado : " + element);
+                        System.out.println("linea duplicada "  + linea);
+                    }else{
+                        //System.out.println("Valor Encontrado Y Agregado al SET: " + element);
+                        System.out.println("linea agregada "  + linea);
+                        uniqueItems.add(element); //Agremamos el valor unico
+                        uniqueItemsPrin.add(linea);
+                    }
                     if (!linea.equals("")){
                         viRowsPrinted++;
                     }
                 }
                 bfLector.close();
+                voLogger.info("getRowsPrinted() --> SIN MAS ELEMENTOS POR RECORRER --> [" + 0 +"]");
+
             }else{
 
-                voLogger.warn("getRowsPrint() --> ESTE ARCHIVO NO EXISTE --> ["+ csv + "]");
+                voLogger.warn("getRowsPrinted() --> ESTE ARCHIVO NO EXISTE --> ["+ csv + "]");
             }
         }catch (IOException e){
-            voLogger.error("getRowsPrint() --> IOEXCEPTION --> ["+ e.getMessage() + "]");
+            voLogger.error("getRowsPrinted() --> IOEXCEPTION --> ["+ e.getMessage() + "]");
         }
-        System.out.println("NUMERO DE FILAS IMPRESAS: " + viRowsPrinted);
+
+        for (String lineClean : uniqueItemsPrin){
+            System.out.println("Linea Unica impresa --- " + lineClean + " --- ");
+            try {
+
+                FileWriter vwNewCsv = new FileWriter(newpathFileCSVSIN, true);
+                vwNewCsv.write(lineClean +"\n");
+                vwNewCsv.flush();
+                vwNewCsv.close();
+
+            }catch (IOException e){
+                voLogger.error("getRowsPrinted() --> IOEXCEPTION --> ["+ e.getMessage() + "]");
+            }
+
+        }
+        System.err.println("NUMERO DE FILAS IMPRESAS SIN DUPLICADOS: " + uniqueItemsPrin.size());
+        System.out.println("NUMERO DE FILAS IMPRESAS CON DUPLICADOS: " + viRowsPrinted);
+        voLogger.info("getRowsPrinted() --> NUEVO CSV SIN DUPLICADOS GENERADO EN --> [" + newpathFileCSVSIN +"]");
+
         return viRowsPrinted;
     }
 
-    private String comprobarColrow(String linea)  {
+    private String obtenerElements(String linea) {
+        String elemento = "";
+        try{
+            StringTokenizer st = new StringTokenizer(linea, ",");
+            for (int i = 0; i < 2; i++) { //itera cada linea por posiciones 2 --> (nud) Cabecer
+                st.nextToken();
+               // System.out.println(" ---------------------------------->" + linea) ;
+            }
+            elemento = st.nextToken();
+            //Almacena la posicion 2 --> Nud y lo retorna
 
+        }catch (Exception e){
+            voLogger.error("obtenerElements() -->EXCEPTION : ERROR DE LECTURA DE LINEA=["+ e.getMessage() + "]");
+        }
+        //System.out.println(elemento);
+        return elemento;
+    }
+
+    private String comprobarColrow(String linea)  {
         int columempty = 0 ;
         int columfull = 0 ;
         int suma = 0;
@@ -195,9 +267,7 @@ public class ValidateFields {
                     columempty ++;
                 }
             }
-
             suma = (columfull + columempty); //SUMAR LAS COLUMNAS VACIAS Y NO VACIAS
-            
         } catch (Exception e){
             voLogger.error("comprobarColrow() --> EXCEPTION - ERROR AL PARSEAR LA FILA --> ["+ e.getMessage() + "]");
         }
@@ -250,6 +320,7 @@ public class ValidateFields {
                     System.out.println("leerCabecera() --> EL ARCHIVO CONTIENE=[" + pesoArchivo + "KB]");
                     numeroDeCabeceras = lineaCabecera.length;
                     br.close();
+                    reader.close();
 
                 }else{
 
@@ -266,7 +337,6 @@ public class ValidateFields {
             voLogger.error("leerCabecera() --> ERROR IOEXCEPTION. [" + io.getMessage()+ "]");
 
         }catch (CsvValidationException e) {
-
             throw new RuntimeException(e);
         }
         voLogger.info("leerCabecera() --> RETORNANDO EL NUMERO DE CABECERAS -->["+ numeroDeCabeceras + "]");
@@ -291,7 +361,8 @@ public class ValidateFields {
          **/
 
         pathFileCSV = new File("").getAbsolutePath() + File.separator + "CSV\\LM_Genesys.csv";
-        newpathFileCSVD = new File("").getAbsolutePath() + File.separator + "CSV\\LM_Normalizada.csv";
+        newpathFileCSVD = new File("").getAbsolutePath() + File.separator + "CSV\\LM_NormalizadaConDuplicados.csv";
+        newpathFileCSVSIN = new File("").getAbsolutePath() + File.separator + "CSV\\LM_NormalizadaSinDuplicados.csv";
 
         ValidateFields va = new ValidateFields();
         va.validarCabeceras(pathFileCSV, 50);
@@ -349,11 +420,7 @@ System.out.println("Obteniendo los archivos del derectorio " + pathFileCSV);
         d.getMessage();
         }
 
-
-
         try {
-
-
 
         if (file.exists()){
         System.out.println("Inicio de Escritura de archivos  ------------->");

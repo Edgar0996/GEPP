@@ -31,9 +31,15 @@ public class App
 
         //Creamos un objeto de la clase send email y le mandamos dos variables al metodo sendmailKranon()
         SendEmail sendEmail = new SendEmail();
-        sendEmail.sendMailCloudKranon("Asunto","123");
+
+        if (sendEmail.sendMailCloudKranon("Reporte de Ejecucion Reporte GEPP from builder", "123456")) {
+            System.out.println("Email enviado de manera exitosa a su destinatario");
+
+        }else{
+            System.out.println("EL email no fue enviado a sus destinatarios");
+        }
+
+        System.out.println("El programa finalizara aqui!");
         System.exit(0);
-
-
     }
 }

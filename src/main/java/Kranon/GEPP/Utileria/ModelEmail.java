@@ -16,10 +16,7 @@ public class ModelEmail implements Serializable {
 
     }
 
-
-
     public static String pathConfigurations = "";
-
     public static String pathFileorigen = "";
     public static String pathFileDestino = "";
 
